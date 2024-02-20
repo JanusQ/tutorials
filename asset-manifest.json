@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/tutorials/static/css/main.0ae29c1f.css",
+    "main.js": "/tutorials/static/js/main.bdfe25f0.js",
+    "static/css/625.376d93d9.chunk.css": "/tutorials/static/css/625.376d93d9.chunk.css",
+    "static/js/625.b0b02739.chunk.js": "/tutorials/static/js/625.b0b02739.chunk.js",
+    "static/css/537.00a6f404.chunk.css": "/tutorials/static/css/537.00a6f404.chunk.css",
+    "static/js/537.fe7640fe.chunk.js": "/tutorials/static/js/537.fe7640fe.chunk.js",
+    "static/js/316.d1b16b5e.chunk.js": "/tutorials/static/js/316.d1b16b5e.chunk.js",
+    "static/media/janus1.svg": "/tutorials/static/media/janus1.c14aaae2f0c005e247b03b96547500e5.svg",
+    "static/media/tansiwei.png": "/tutorials/static/media/tansiwei.7c37b16779720c25b454.png",
+    "static/media/jianweiyin.png": "/tutorials/static/media/jianweiyin.cc836bd95fc30519fedd.png",
+    "static/media/logo.png": "/tutorials/static/media/logo.b8fa644b74b62974bbcb.png",
+    "static/media/wuweitian.png": "/tutorials/static/media/wuweitian.759781b5ad45dd39eeeb.png",
+    "static/media/paper.png": "/tutorials/static/media/paper.f3dd62501b05e4142fb2.png",
+    "static/media/liqianglu.png": "/tutorials/static/media/liqianglu.9e5e5f6e6ecc5566f801.png",
+    "index.html": "/tutorials/index.html",
+    "main.0ae29c1f.css.map": "/tutorials/static/css/main.0ae29c1f.css.map",
+    "main.bdfe25f0.js.map": "/tutorials/static/js/main.bdfe25f0.js.map",
+    "625.376d93d9.chunk.css.map": "/tutorials/static/css/625.376d93d9.chunk.css.map",
+    "625.b0b02739.chunk.js.map": "/tutorials/static/js/625.b0b02739.chunk.js.map",
+    "537.00a6f404.chunk.css.map": "/tutorials/static/css/537.00a6f404.chunk.css.map",
+    "537.fe7640fe.chunk.js.map": "/tutorials/static/js/537.fe7640fe.chunk.js.map",
+    "316.d1b16b5e.chunk.js.map": "/tutorials/static/js/316.d1b16b5e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ae29c1f.css",
+    "static/js/main.bdfe25f0.js"
+  ]
+}
