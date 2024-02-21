@@ -1,0 +1,22 @@
+.root {
+  height: 100%;
+  :global {
+    // height: 100%;
+    .resource_container {
+      min-height: 800px;
+
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      .publications {
+        height: 300px;
+      }
+      .slides {
+        height: 300px;
+      }
+      .videos {
+        height: 300px;
+      }
+    }
+  }
+}

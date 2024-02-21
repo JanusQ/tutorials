@@ -284,10 +284,13 @@ export default function JanusHomePage() {
                     <div className="paper_title">{item.title}</div>
                     <div className="paper_team">{item.team}</div>
                     <div className="link">
-                      <div className="link_boder">
-                        <img className="paper_icon" src={paper} alt=""></img>
-                        Paper
-                      </div>
+                      <a href={item.link} target="_blank">
+                        <div className="link_boder">
+                          <img className="paper_icon" src={paper} alt=""></img>
+                          Paper
+                        </div>
+                      </a>
+
                       <div className="link_boder">
                         <img
                           className="lighting_icon"
