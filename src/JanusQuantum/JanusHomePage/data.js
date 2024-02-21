@@ -226,7 +226,7 @@ export const organizerData = [
 ]
 export const papersData = [
   {
-    title: `(HPCA 2023) HyQSAT: A Hybrid Approach for 3-SAT Problems by
+    title: `[HPCA 2023] HyQSAT: A Hybrid Approach for 3-SAT Problems by
     Integrating Quantum Annealer with CDCL`,
     team: `   Siwei Tan, Mingqian Yu, Andre Python, Yongheng
     Shang, Tingting Li, Liqiang Lu, Jianwei Yin (Zhejiang

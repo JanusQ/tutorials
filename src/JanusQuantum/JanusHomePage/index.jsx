@@ -342,8 +342,8 @@ export default function JanusHomePage() {
               <Divider />
 
               {organizerData.map((item, index) => (
-                <div className="organizer_item">
-                  <div className="speakers_1 speaker" key={index}>
+                <div className="organizer_item" key={index}>
+                  <div className="speakers_1 speaker">
                     <div className="photo">
                       {/* <img src={item.photo} alt="" /> */}
                       <Avatar src={item.photo} shape="square" size={100} />

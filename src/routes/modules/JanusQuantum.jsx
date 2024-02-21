@@ -3,19 +3,23 @@ import { Navigate } from 'react-router-dom'
 
 import LazyLoad from '../utils/LazyLoad'
 import JanusLayout from './../../JanusQuantum/JanusLayout'
+import JanusHomePage from './../../JanusQuantum/JanusHomePage'
 export const JanusRouter = [
   {
     element: <JanusLayout />,
     children: [
       {
-        path: '/janus',
-        element: LazyLoad(
-          React.lazy(() => import('./../../JanusQuantum/JanusHomePage'))
-        ),
+        path: '/',
+        element: <Navigate to="/home" />,
+      },
+      {
+        path: '/home',
+        element: <JanusHomePage />,
+
         meta: {
-          requiresAuth: true,
-          title: 'janus',
-          key: 'janus',
+          requiresAuth: false,
+          title: 'home',
+          key: 'home',
         },
       },
       {
@@ -24,7 +28,7 @@ export const JanusRouter = [
           React.lazy(() => import('./../../JanusQuantum/Resources'))
         ),
         meta: {
-          requiresAuth: true,
+          requiresAuth: false,
           title: 'resources',
           key: 'resources',
         },

@@ -111,7 +111,7 @@ export default function JanusLayout() {
         <div className="container">
           <div className="nav">
             <div className="logo">
-              <Link to="/janus">
+              <Link to="/home">
                 <img
                   style={{
                     width: 50,

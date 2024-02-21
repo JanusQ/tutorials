@@ -16,7 +16,7 @@
     "sass": "^1.67.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://guyueguangze.github.io/janus",
+  "homepage": "https://Janus.github.io/tutorials",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
