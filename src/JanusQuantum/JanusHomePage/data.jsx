@@ -402,8 +402,8 @@ export const papersData = [
     team: `Siwei Tan, Congliang Lang, Liang Xiang; Shudi Wang, Xinghui
     Jia, Ziqi Tan, Tingting Li (Zhejiang University), Jieming
     Yin (Nanjing University of Posts and Telecommunications);
-    Yongheng Shang, Andre Python, Liqiang Lu*, Jianwei
-    Yin* (Zhejiang University)`,
+    Yongheng Shang, Andre Python, Liqiang Lu, Jianwei
+    Yin (Zhejiang University)`,
     link: 'https://dl.acm.org/doi/10.1145/3613424.3614274',
   },
   {
