@@ -33,6 +33,14 @@ export const JanusRouter = [
           key: 'resources',
         },
       },
+      {
+        path: '/404',
+        element: LazyLoad(React.lazy(() => import('@/pages/ErrorMessage/404'))),
+      },
+      {
+        path: '*',
+        element: <Navigate to="/404" />,
+      },
     ],
   },
 ]
