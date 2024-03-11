@@ -209,7 +209,7 @@ export const dataSource = [
     key: '12',
     // TimePDT: '1:40 PM',
     // TimeEDT: '4:40 PM',
-    Agenda: 'End-to-end speedup in domain problems based on guantum SAT solver',
+    Agenda: 'End-to-end speedup in domain problems based on quantum SAT solver',
     // Presenter: 'Tushar',
     Resources: (
       <span>

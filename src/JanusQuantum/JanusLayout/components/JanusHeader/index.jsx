@@ -68,7 +68,7 @@ export default function JanusHeader({ fontColor }) {
       link: (
         <a
           target="_blank"
-          href="http://janusq.zju.edu.cn:10210/#/home"
+          href="https://janusq.github.io/team/home"
           rel="noreferrer"
         >
           Team
