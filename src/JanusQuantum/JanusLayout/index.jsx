@@ -132,7 +132,7 @@ export default function JanusLayout() {
                   }}
                   className="logoName"
                 >
-                  Juans Quantum
+                  Janus Quantum
                 </span>
               </Link>
             </div>

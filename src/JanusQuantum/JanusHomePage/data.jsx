@@ -4,6 +4,7 @@ import jianweiyin from '../../assets/image/janusSwiper/jianweiyin.png'
 import liqianglu from '../../assets/image/janusSwiper/liqianglu.png'
 import tansiwei from '../../assets/image/janusSwiper/tansiwei.png'
 import wuweitian from '../../assets/image/janusSwiper/wuweitian.png'
+import zhanghanyu from '@/assets/image/janusSwiper/HanyuZhang.jpg'
 export const dataSource = [
   {
     key: '1',
@@ -373,13 +374,13 @@ export const organizerData = [
     name: 'Siwei Tan',
     photo: tansiwei,
     introduce:
-      'Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture. Wuwei Tian is a 4th year PhD student at Zhejiang  University.',
+      'Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture.',
   },
   {
-    name: 'Wuwei Tian',
-    photo: wuweitian,
+    name: 'Hanyu Zhang',
+    photo: zhanghanyu,
     introduce:
-      'Wuwei Tian is a 4th year PhD student at Zhejiang University. He is interested in the compiler design and quantum hardware.',
+      'Hanyu Zhang’s research interests include quantum hardware and quantum calibration. He  has published papers in ASPLOS and DAC.',
   },
 ]
 export const papersData = [
@@ -407,8 +408,7 @@ export const papersData = [
     link: 'https://dl.acm.org/doi/10.1145/3613424.3614274',
   },
   {
-    title: `[Nature 2022] Digital quantum simulation of Floquet
-    symmetry-protected topological phases`,
+    title: `[Nature 2022] Digital Quantum Simulation of Floquet SymmetryProtected Topological Phases`,
     team: `Xu Zhang (Zhejiang University), Wenjie Jiang (Tsinghua
       University), Jinfeng Deng, Ke Wang, Jiachen Chen, Pengfei
       Zhang, Wenhui Ren, Hang Dong, Shibo Xu, Yu Gao, Feitong Jin,

@@ -26,13 +26,13 @@ export default function JanusFooter() {
                 <li>
                   <a
                     target="_blank"
-                    href="http://physics.zju.edu.cn/"
+                    href="https://janusq.github.io/team/home"
                     rel="noreferrer"
                   >
-                    School of Computer Science, Zhejiang University
+                    Taiyuan Quantum Computing Research Group
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     target="_blank"
                     href="http://www.cs.zju.edu.cn/"
@@ -40,7 +40,7 @@ export default function JanusFooter() {
                   >
                     School of Physics, Zhejiang University
                   </a>
-                </li>
+                </li> */}
               </ul>
             </Col>
             <Col lg={6} sm={24} xs={24}>
@@ -48,10 +48,18 @@ export default function JanusFooter() {
                 <li className="footer_menu_title">
                   <span>USER GUIDE</span>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/home/document">USER GUIDE</Link>
+                </li> */}
+                <li>
+                  <a
+                    target="_blank"
+                    href="http://janusq.zju.edu.cn/#/documents"
+                    rel="noreferrer"
+                  >
+                    USER GUIDE
+                  </a>
                 </li>
-                <li></li>
               </ul>
             </Col>
             <Col lg={6} sm={24} xs={24}>
@@ -60,7 +68,13 @@ export default function JanusFooter() {
                   <span>QUANTUM APPLICATIONS</span>
                 </li>
                 <li>
-                  <Link to="/notFound">Solutions</Link>
+                  <a
+                    target="_blank"
+                    href="http://janusq.zju.edu.cn/#/home"
+                    rel="noreferrer"
+                  >
+                    Taiyuan Quantum Computing Cloud Platform
+                  </a>
                 </li>
               </ul>
             </Col>
@@ -68,6 +82,7 @@ export default function JanusFooter() {
               <div className="footer_phone">
                 <p className="footer_phone_title">CONTACT US</p>
                 <p>Address: Xixi Campus of Zhejiang University</p>
+                <p>Email: liqianglu_at_zju.edu.cn</p>
                 <p>Telephone:0571-81951139</p>
                 <p>Zip code:310028</p>
               </div>
