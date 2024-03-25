@@ -6,7 +6,14 @@ import janus from '../../assets/image/janusSwiper/janus1.svg'
 import paper from '../../assets/image/janusSwiper/paper.png'
 import Lightning from '../../assets/image/janusSwiper/Lightning.png'
 import { LinkOutlined } from '@ant-design/icons'
-import { dataSource, columns1, organizerData, papersData } from './data'
+import {
+  dataSource,
+  columns1,
+  organizerData,
+  papersData,
+  participatorData,
+} from './data'
+import Title from '@/components/Title'
 export default function JanusHomePage() {
   const articleContent = useRef()
   const Overview = useRef()
@@ -358,6 +365,16 @@ export default function JanusHomePage() {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="participant">
+              <div className="participant_content">
+                {participatorData.map((item, index) => (
+                  <div className="participant_item" key={index}>
+                    {item}
+                    {index !== participatorData.length - 1 ? ',' : ''}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="article_content_right"></div>

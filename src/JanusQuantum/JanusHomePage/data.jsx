@@ -1,7 +1,7 @@
 import { Space, Table, Tag, Col, Row, Affix, Divider } from 'antd'
 import { Link } from 'react-router-dom'
-import jianweiyin from '../../assets/image/janusSwiper/jianweiyin.png'
-import liqianglu from '../../assets/image/janusSwiper/liqianglu.png'
+import jianweiyin from '../../assets/image/janusSwiper/JianweiYin.png'
+import liqianglu from '../../assets/image/janusSwiper/liqianglu.jpg'
 import tansiwei from '../../assets/image/janusSwiper/tansiwei.png'
 import wuweitian from '../../assets/image/janusSwiper/wuweitian.png'
 import zhanghanyu from '@/assets/image/janusSwiper/HanyuZhang.jpg'
@@ -376,12 +376,6 @@ export const organizerData = [
     introduce:
       'Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture.',
   },
-  {
-    name: 'Hanyu Zhang',
-    photo: zhanghanyu,
-    introduce:
-      'Hanyu Zhang’s research interests include quantum hardware and quantum calibration. He  has published papers in ASPLOS and DAC.',
-  },
 ]
 export const papersData = [
   {
@@ -418,4 +412,18 @@ export const papersData = [
       University) & Haohua Wang (Zhejiang University)`,
     link: 'https://www.nature.com/articles/s41586-022-04854-3',
   },
+]
+
+export const participatorData = [
+  // {
+  //   name: 'Hanyu Zhang',
+  //   photo: zhanghanyu,
+  //   introduce:
+  //     'Hanyu Zhang’s research interests include quantum hardware and quantum calibration. He  has published papers in ASPLOS and DAC.',
+  // },
+  'Chenning Tao',
+  'Yifan Guo',
+  'Xinghui Jia',
+  'Hanyu Zhang',
+  'Congliang Lang',
 ]
