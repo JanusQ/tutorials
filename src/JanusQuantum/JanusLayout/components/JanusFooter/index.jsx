@@ -54,7 +54,7 @@ export default function JanusFooter() {
                 <li>
                   <a
                     target="_blank"
-                    href="http://janusq.zju.edu.cn/#/documents"
+                    href="http://janusq.zju.edu.cn/documents"
                     rel="noreferrer"
                   >
                     USER GUIDE
@@ -70,7 +70,7 @@ export default function JanusFooter() {
                 <li>
                   <a
                     target="_blank"
-                    href="http://janusq.zju.edu.cn/#/home"
+                    href="http://janusq.zju.edu.cn/home"
                     rel="noreferrer"
                   >
                     Taiyuan Quantum Computing Cloud Platform

@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Lato;
+  font-family: PingFang_REGULAR;
   src: url("./PingFang_REGULAR.woff2");
   
 }
 @font-face {
-  font-family: PingFang_HEAVY;
+  font-family: 'PingFang_HEAVY';
   src: url("./PingFang_HEAVY.woff2");
 
 }

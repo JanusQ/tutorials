@@ -8,10 +8,14 @@ import zhanghanyu from '@/assets/image/janusSwiper/HanyuZhang.jpg'
 export const dataSource = [
   {
     key: '1',
-    TimePDT: <div style={{ fontWeight: 600 }}>0.25 h</div>,
+    TimePDT: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        1:00 PM
+      </div>
+    ),
     // TimeEDT: '4:40 PM',
     Agenda: (
-      <div style={{ fontWeight: 600 }}>
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
         Introduction of Janus quantum cloud platform
       </div>
     ),
@@ -29,14 +33,22 @@ export const dataSource = [
   },
   {
     key: '2',
-    TimePDT: <div style={{ fontWeight: 600 }}>1.5 h </div>,
+    TimePDT: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        1:15 PM
+      </div>
+    ),
     // TimeEDT: '4:40 PM',
-    Agenda: <div style={{ fontWeight: 600 }}>Janus-CT Details </div>,
+    Agenda: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        Janus-CT Details
+      </div>
+    ),
     Presenter: 'Siwei Tan',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
+          <Link to="/resources">slide</Link>
         </Tag>
         <Tag color={'blue'}>
           <Link to="/resources">video</Link>
@@ -118,9 +130,17 @@ export const dataSource = [
   },
   {
     key: '7',
-    TimePDT: <div style={{ fontWeight: 600 }}>0.5 h</div>,
+    TimePDT: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        2:45 PM
+      </div>
+    ),
     // TimeEDT: '4:40 PM',
-    Agenda: <div style={{ fontWeight: 600 }}>Janus-FEM Details</div>,
+    Agenda: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        Janus-FEM Details
+      </div>
+    ),
     Presenter: 'Hanyu Zhang',
     Resources: (
       <span>
@@ -171,10 +191,16 @@ export const dataSource = [
   },
   {
     key: '10',
-    TimePDT: <div style={{ fontWeight: 600 }}>1.25 h</div>,
+    TimePDT: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        3:15 PM
+      </div>
+    ),
     // TimeEDT: '4:40 PM',
     Agenda: (
-      <div style={{ fontWeight: 600 }}>lmplementing quantum applications</div>
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        lmplementing quantum applications
+      </div>
     ),
     Presenter: 'Liqiang Lu',
     Resources: (
@@ -242,14 +268,20 @@ export const dataSource = [
   },
   {
     key: '14',
-    TimePDT: <div style={{ fontWeight: 600 }}>0.5 h</div>,
+    TimePDT: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        4:30 PM
+      </div>
+    ),
     // TimeEDT: '4:40 PM',
-    Agenda: <div style={{ fontWeight: 600 }}>Q & A</div>,
+    Agenda: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>Q & A</div>
+    ),
     Presenter: 'Siwei Tan',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
+          <Link to="/resources">slide</Link>
         </Tag>
         <Tag color={'blue'}>
           <Link to="/resources">video</Link>
@@ -322,27 +354,43 @@ export const dataSource1 = [
 ]
 export const columns1 = [
   {
-    title: <div style={{ fontWeight: 600 }}>Time (PDT)</div>,
+    title: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        Time (PDT)
+      </div>
+    ),
     dataIndex: 'TimePDT',
     key: 'Time(PDT)',
   },
+  // {
+  //   title: <div style={{  fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>Time (EDT)</div>,
+  //   dataIndex: 'TimeEDT',
+  //   key: 'TimeEDT',
+  // },
   {
-    title: <div style={{ fontWeight: 600 }}>Time (EDT)</div>,
-    dataIndex: 'TimeEDT',
-    key: 'TimeEDT',
-  },
-  {
-    title: <div style={{ fontWeight: 600 }}>Agenda</div>,
+    title: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        Agenda
+      </div>
+    ),
     dataIndex: 'Agenda',
     key: 'Agenda',
   },
   {
-    title: <div style={{ fontWeight: 600 }}>Presenter</div>,
+    title: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        Presenter
+      </div>
+    ),
     dataIndex: 'Presenter',
     key: 'Presenter',
   },
   {
-    title: <div style={{ fontWeight: 600 }}>Resources</div>,
+    title: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        Resources
+      </div>
+    ),
     dataIndex: 'Resources',
     key: 'Resources',
   },
@@ -379,9 +427,16 @@ export const organizerData = [
 ]
 export const papersData = [
   {
+    title: `[ASPLOS 2024] MorphQPV: Exploiting Isomorphism in Quantum Programs to Facilitate Confident Verification`,
+    team: `Siwei Tan, Debin Xiang, Liqiang Lu, Junlin Lu (Peking University), Qiuping Jiang (Ningbo University), Mingshuai Chen, and Jianwei Yin`,
+    link: 'https://doi.org/10.1145/3620666.3651360',
+    pdf: 'MorphQPV',
+  },
+  {
     title: `[ASPLOS 2024] QuFEM: Fast and Accurate Quantum Readout Calibration Using the Finite Element Method`,
     team: `Siwei Tan, Hanyu Zhang, Jia Yu, Congliang Lang, Xinkui Zhao, Mingshuai Chen, Yun Liang, Liqiang Lu, and Jianwei Yin (Zhejiang University)`,
-    link: '',
+    link: 'https://doi.org/10.1145/3620665.3640380',
+    pdf: 'QuFEM',
   },
   {
     title: `[HPCA 2023] HyQSAT: A Hybrid Approach for 3-SAT Problems by
@@ -390,6 +445,7 @@ export const papersData = [
     Shang, Tingting Li, Liqiang Lu, Jianwei Yin (Zhejiang
     University)`,
     link: 'https://ieeexplore.ieee.org/document/10071022',
+    pdf: 'HyQSAT',
   },
   {
     title: `[MICRO 2023] QuCT: A Framework for Analyzing Quantum Circuit
@@ -400,6 +456,7 @@ export const papersData = [
     Yongheng Shang, Andre Python, Liqiang Lu, Jianwei
     Yin (Zhejiang University)`,
     link: 'https://dl.acm.org/doi/10.1145/3613424.3614274',
+    pdf: 'QuCT',
   },
   {
     title: `[Nature 2022] Digital Quantum Simulation of Floquet SymmetryProtected Topological Phases`,
@@ -411,16 +468,11 @@ export const papersData = [
       Wang* (Zhejiang University), Dong-Ling Deng* (Tsinghua
       University) & Haohua Wang (Zhejiang University)`,
     link: 'https://www.nature.com/articles/s41586-022-04854-3',
+    pdf: 'Digital',
   },
 ]
 
 export const participatorData = [
-  // {
-  //   name: 'Hanyu Zhang',
-  //   photo: zhanghanyu,
-  //   introduce:
-  //     'Hanyu Zhang’s research interests include quantum hardware and quantum calibration. He  has published papers in ASPLOS and DAC.',
-  // },
   'Chenning Tao',
   'Yifan Guo',
   'Xinghui Jia',

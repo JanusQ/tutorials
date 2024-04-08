@@ -2,7 +2,7 @@
   :global {
     width: 100%;
     height: 100%;
-    font-family: Lato;
+    font-family: PingFang_REGULAR;
     .home_content {
       height: 100%;
       // position: relative;
@@ -14,16 +14,16 @@
           justify-content: center;
           margin: 30px 0px;
           .header_title {
-            width: 70%;
-            margin-left: 10%;
+            // width: 70%;
+            // margin-left: 10%;
             span {
               color: black;
               font-size: 1.5rem;
-              font-weight: 1000;
+              font-weight: 700;
               text-align: center;
               text-align: left;
               display: inline-block;
-              font-family: sans-serif;
+              font-family: PingFang_HEAVY;
             }
           }
         }
@@ -32,8 +32,8 @@
           display: flex;
           justify-content: center;
           img {
-            width: 70%;
-            margin-left: 10%;
+            width: 100%;
+            // margin-left: 10%;
             height: 40%;
           }
         }
@@ -46,13 +46,13 @@
           @media screen and (max-width: 780px) {
             visibility: hidden;
           }
-          width: 20%;
+          // width: 20%;
           .article_nav_content {
             margin-top: 62px;
             display: flex;
             align-items: center;
             flex-direction: column;
-            font-family: sans-serif;
+            font-family: PingFang_HEAVY;
             font-size: 1rem;
             font-weight: 700;
             .articleNav {
@@ -109,12 +109,12 @@
           }
         }
         .article_content {
-          width: 70%;
-          font-family: Lato;
+          // width: 70%;
+          font-family: PingFang_REGULAR;
           font-size: 1.2rem;
           .article_overView {
             .article_overView_titel {
-              font-family: sans-serif;
+              font-family: PingFang_HEAVY;
             }
             .articcle_overView_content {
               text-align: justify;
@@ -129,17 +129,17 @@
               text-align: left;
               line-height: 80px;
               margin-top: 20px;
-              font-family: sans-serif;
+              font-family: PingFang_HEAVY;
             }
             .article_Scheule_titel {
-              font-family: sans-serif;
+              font-family: PingFang_HEAVY;
             }
             .articcle_Scheule_content {
               text-align: justify;
               margin-bottom: 20px;
               line-height: 1.5rem;
               :global(.ant-table-cell) {
-                font-family: Lato;
+                font-family: PingFang_REGULAR;
                 font-weight: 400;
                 font-size: 1rem;
                 background: #fff;
@@ -196,12 +196,13 @@
             .realted_papers {
               text-align: justify;
               .realted_papers_title {
-                font-family: sans-serif;
+                font-family: PingFang_HEAVY;
               }
               .realted_papers_content {
                 margin-bottom: 20px;
                 .paper_title {
-                  font-weight: 700;
+                  font-weight: 800;
+                  font-family: PingFang_HEAVY;
                   font-size: 1rem;
                   line-height: 1.5rem;
                 }
@@ -211,6 +212,7 @@
                 }
                 .link {
                   // margin-top: 20px;
+                  cursor: pointer;
                   display: flex;
                   width: 300px;
                   justify-content: space-between;
@@ -284,7 +286,7 @@
 
             .speaker_title {
               h1 {
-                font-family: sans-serif;
+                font-family: PingFang_HEAVY;
                 font-weight: 700;
               }
             }

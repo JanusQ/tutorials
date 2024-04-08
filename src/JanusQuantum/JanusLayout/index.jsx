@@ -16,6 +16,7 @@ export default function JanusLayout() {
     width: '100%',
     height: 60,
     zIndex: 1000,
+    position: 'fixed',
   })
   const [fontColor, setfontColor] = useState('black')
   const [windowHeight, setWindowHeight] = useState(0)
@@ -107,7 +108,7 @@ export default function JanusLayout() {
   }, [])
   return (
     <div className={styles.root}>
-      <Header style={headerStyle}>
+      {/* <Header style={headerStyle}>
         <div className="container">
           <div className="nav">
             <div className="logo">
@@ -154,11 +155,11 @@ export default function JanusLayout() {
               />
             </Dropdown>
           </div>
-          {/* <div className="search">
-            <SearchOutlined style={{ fontSize: 18, color: fontColor }} />
-          </div> */}
         </div>
-      </Header>
+      </Header> */}
+      <JanusHeader></JanusHeader>
+
+      <div className="placeholder" style={{ height: 60 }}></div>
       <Content style={contentStyle}>
         <Outlet />
       </Content>

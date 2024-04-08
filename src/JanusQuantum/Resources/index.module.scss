@@ -3,19 +3,164 @@
   :global {
     // height: 100%;
     .resource_container {
-      min-height: 800px;
-
+      // min-height: 800px;
+      padding-bottom: 50px;
+      margin-top: 50px;
       display: flex;
       flex-direction: column;
       text-align: left;
+      .title {
+        font-weight: 800;
+        font-family: PingFang_HEAVY;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
       .publications {
-        height: 300px;
+        .realted_papers_content {
+          margin-top: 30px;
+
+          margin-bottom: 20px;
+          .paper_title {
+            font-weight: 800;
+            font-family: PingFang_HEAVY;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            a {
+              color: #000;
+            }
+          }
+          .paper_team {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-family: PingFang_REGULAR;
+            font-weight: 400;
+          }
+          .link {
+            // margin-top: 20px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            width: 300px;
+            justify-content: space-between;
+            color: rgb(49, 3, 151);
+            a {
+              color: rgb(49, 3, 151);
+            }
+            .link_boder {
+              position: relative;
+              padding: 10px;
+              &::after {
+                content: '';
+                position: absolute;
+              }
+              &::after {
+                border-bottom: 2px solid rgb(49, 3, 151);
+                left: 51%;
+                right: 51%;
+                bottom: 0px;
+                transition: all 0.2s;
+              }
+              &:hover::after {
+                left: 0%;
+                right: 0%;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 20px;
+              margin-right: 10px;
+            }
+            .paper_icon {
+              width: 17px;
+            }
+            .lighting_icon {
+              width: 29px;
+            }
+          }
+        }
       }
       .slides {
-        height: 300px;
+        margin-top: 50px;
+        .slides_content {
+          margin-top: 30px;
+          .slides_item {
+            // display: flex;
+            // align-items: center;
+            .pdf_title {
+              font-family: PingFang_REGULAR;
+              font-size: 1rem;
+              line-height: 1.5rem;
+              margin-right: 10px;
+            }
+            .link {
+              // margin-top: 20px;
+              cursor: pointer;
+              font-size: 18px;
+              display: flex;
+              width: 300px;
+              justify-content: space-between;
+              color: rgb(49, 3, 151);
+              a {
+                color: rgb(49, 3, 151);
+              }
+              .link_boder {
+                position: relative;
+                padding: 10px;
+                &::after {
+                  content: '';
+                  position: absolute;
+                }
+                &::after {
+                  border-bottom: 2px solid rgb(49, 3, 151);
+                  left: 51%;
+                  right: 51%;
+                  bottom: 0px;
+                  transition: all 0.2s;
+                }
+                &:hover::after {
+                  left: 0%;
+                  right: 0%;
+                }
+              }
+
+              img {
+                width: 100%;
+                height: 20px;
+                margin-right: 10px;
+              }
+              .paper_icon {
+                width: 17px;
+              }
+              .lighting_icon {
+                width: 29px;
+              }
+            }
+            .operate {
+              // margin-top: 10px;
+            }
+          }
+        }
       }
-      .videos {
-        height: 300px;
+      .video {
+        margin-top: 50px;
+
+        .video_content {
+          margin-top: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          .video_item {
+            padding: 10px;
+            iframe {
+              border-radius: 5px;
+            }
+          }
+          .title {
+            font-size: 15px;
+            font-family: PingFang_REGULAR;
+            font-weight: normal;
+          }
+        }
       }
     }
   }

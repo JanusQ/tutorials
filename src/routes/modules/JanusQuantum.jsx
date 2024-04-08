@@ -34,6 +34,17 @@ export const JanusRouter = [
         },
       },
       {
+        path: '/pdfPreview',
+        element: LazyLoad(
+          React.lazy(() => import('./../../JanusQuantum/PdfPreview'))
+        ),
+        meta: {
+          requiresAuth: false,
+          title: 'resources',
+          key: 'resources',
+        },
+      },
+      {
         path: '/404',
         element: LazyLoad(React.lazy(() => import('@/pages/ErrorMessage/404'))),
       },
