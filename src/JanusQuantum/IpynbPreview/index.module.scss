@@ -1,0 +1,20 @@
+.root {
+  :global {
+    text-align: start;
+    .container {
+      flex-direction: column;
+    }
+    :global(.container) {
+      flex-direction: column;
+      :global(.cell) {
+        margin: 0;
+        border: 0px solid #fff;
+        // background-color: #fff !important;
+      }
+    }
+
+    .cell {
+      margin: 0;
+    }
+  }
+}

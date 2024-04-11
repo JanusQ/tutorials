@@ -1,0 +1,75 @@
+.root {
+  :global {
+    // text-align-last: left;
+
+    text-align: justify;
+    .demonstrations {
+      display: flex;
+      .left_menu {
+        min-width: 400px;
+        height: 1000px;
+        // background-color: red;
+        padding: 80px 0px 20px 40px;
+        overflow: hidden;
+        :global(.ant-affix) {
+          z-index: 100;
+        }
+      }
+      .domo_container {
+        text-align-last: left;
+        width: calc(100% - 400px);
+        margin-left: 20px;
+
+        padding: 50px 0;
+        .title {
+          text-align: left;
+          font-weight: 800;
+          font-family: PingFang_HEAVY;
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+          padding: 30px 0;
+        }
+        .list_content {
+          .list_item {
+            font-size: 18px;
+            line-height: 30px;
+            cursor: pointer;
+            font-family: PingFang_REGULAR;
+            a {
+              color: #000;
+            }
+          }
+        }
+      }
+      .IpynbRenderer_content {
+        width: calc(100% - 400px);
+        text-align: justify;
+        :global(.container) {
+          flex-direction: column;
+          :global(.cell) {
+            margin: 0;
+            border: 0px solid #fff;
+            // background-color: #fff !important;
+          }
+        }
+      }
+      :global(.container) {
+        flex-direction: column;
+        :global(.cell) {
+          margin: 0;
+          border: 0px solid #fff;
+          // background-color: #fff !important;
+        }
+      }
+      :global(.ant-tree-title) {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        -webkit-line-clamp: 2; /* 控制显示的行数 */
+        text-align: left;
+        // max-height: 2em; /* 控制最大高度，可以根据需要调整 */
+      }
+    }
+  }
+}

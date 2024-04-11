@@ -40,18 +40,50 @@ export const JanusRouter = [
         ),
         meta: {
           requiresAuth: false,
-          title: 'resources',
-          key: 'resources',
+          title: 'pdfPreview',
+          key: 'pdfPreview',
+        },
+      },
+
+      {
+        path: '/tutorial_liealgebra',
+        element: LazyLoad(
+          React.lazy(() => import('../../JanusQuantum/IpynbPreview'))
+        ),
+        meta: {
+          requiresAuth: false,
+          title: 'tutorial_liealgebra',
+          key: 'tutorial_liealgebra',
+        },
+      },
+      {
+        path: '/test',
+        element: LazyLoad(React.lazy(() => import('@/pages/Test'))),
+        meta: {
+          requiresAuth: false,
+          title: 'test',
+          key: 'tes',
         },
       },
       {
         path: '/404',
         element: LazyLoad(React.lazy(() => import('@/pages/ErrorMessage/404'))),
       },
-      {
-        path: '*',
-        element: <Navigate to="/404" />,
-      },
+      // {
+      //   path: '*',
+      //   element: <Navigate to="/404" />,
+      // },
     ],
+  },
+  {
+    path: '/demonstrations',
+    element: LazyLoad(
+      React.lazy(() => import('../../JanusQuantum/Demonstrations'))
+    ),
+    meta: {
+      requiresAuth: false,
+      title: 'demonstrations',
+      key: 'demonstrations',
+    },
   },
 ]

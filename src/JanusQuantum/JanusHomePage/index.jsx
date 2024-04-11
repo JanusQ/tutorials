@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import { Space, Table, Tag, Col, Row, Affix, Divider, Avatar } from 'antd'
 import styles from './index.module.scss'
 
-import janus from '../../assets/image/janusSwiper/janus1.svg'
+import janus from '../../assets/image/janusSwiper/Frame 3.svg'
 import paper from '../../assets/image/janusSwiper/paper.png'
 import Lightning from '../../assets/image/janusSwiper/Lightning.png'
 import { LinkOutlined, FileOutlined, FilePdfOutlined } from '@ant-design/icons'
@@ -21,6 +21,7 @@ export default function JanusHomePage() {
   const Schedule = useRef()
   const Organizer = useRef()
   const Speakers = useRef()
+  const Links = useRef()
   // const JanusQCloud = useRef()
   const RealtedPapers = useRef()
   // const gitRpepos = useRef()
@@ -37,12 +38,17 @@ export default function JanusHomePage() {
       name: 'Schedule',
     },
     {
-      id: 'RealtedPapers',
-      name: 'Platform',
+      id: 'Links',
+      name: 'Links',
     },
     {
+      id: 'RealtedPapers',
+      name: 'Realted Papers',
+    },
+
+    {
       id: 'OrganizersAndPresenters',
-      name: 'Organization',
+      name: 'Organizer',
     },
     // {
     //   id: 'JanusQCloud',
@@ -55,55 +61,46 @@ export default function JanusHomePage() {
   ]
   const [navAcitve, setnavAcitve] = useState('Overview')
   const toClickContent = (content) => {
-    console.log(content, 'content')
+    let topPosition
     switch (content) {
       case 'Overview':
-        document.documentElement.scrollTop = Overview.current.offsetTop
+        topPosition = Overview.current.offsetTop
         setnavAcitve('Overview')
         break
       case 'Schedule':
-        document.documentElement.scrollTop = Schedule.current.offsetTop
+        topPosition = Schedule.current.offsetTop
         setnavAcitve('Schedule')
 
         break
       case 'OrganizersAndPresenters':
-        document.documentElement.scrollTop = Organizer.current.offsetTop
+        topPosition = Organizer.current.offsetTop
         setnavAcitve('OrganizersAndPresenters')
 
         break
       case 'Speakers':
-        document.documentElement.scrollTop = Speakers.current.offsetTop
+        topPosition = Speakers.current.offsetTop
         setnavAcitve('Speakers')
 
         break
-        // case 'JanusQCloud':
-        //   document.documentElement.scrollTop = JanusQCloud.current.offsetTop
-        //   setnavAcitve('JanusQCloud')
 
-        break
       case 'RealtedPapers':
-        document.documentElement.scrollTop = RealtedPapers.current.offsetTop
+        topPosition = RealtedPapers.current.offsetTop
         setnavAcitve('RealtedPapers')
 
         break
-        // case 'gitRpepos':
-        //   document.documentElement.scrollTop = gitRpepos.current.offsetTop
-        //   setnavAcitve('gitRpepos')
+      case 'Links':
+        topPosition = Links.current.offsetTop
+        setnavAcitve('Links')
 
         break
-
       default:
         break
     }
+    window.scrollTo({ top: topPosition + 300, behavior: 'smooth' })
   }
   useEffect(() => {
     setWindowHeight(document.body.clientHeight)
     window.addEventListener('scroll', articleContentOnScroll)
-    return () => {
-      window.addEventListener('scroll', articleContentOnScroll)
-    }
-  }, [])
-  useEffect(() => {
     return () => {
       window.removeEventListener('scroll', articleContentOnScroll)
     }
@@ -114,35 +111,23 @@ export default function JanusHomePage() {
       window.scrollY ||
       document?.documentElement?.scrollTop ||
       document.body.scrollTop
-    const offsetTop = articleContent?.current?.offsetTop
-    const articleContenttop = offsetTop - scrollTop
-    if (articleContenttop < 220) {
-      setshowArticContentNav(true)
-    } else {
-      // setshowArticContentNav(false)
-    }
 
-    if (scrollTop > Overview.current.offsetTop - 300) {
+    if (scrollTop > Overview.current.offsetTop) {
       setnavAcitve('Overview')
     }
 
-    if (scrollTop > Schedule.current.offsetTop - 300) {
+    if (scrollTop > Schedule.current.offsetTop) {
       setnavAcitve('Schedule')
     }
-    if (scrollTop > RealtedPapers.current.offsetTop - 300) {
+    if (scrollTop > Links.current.offsetTop) {
+      setnavAcitve('Links')
+    }
+    if (scrollTop > RealtedPapers.current.offsetTop) {
       setnavAcitve('RealtedPapers')
     }
-    if (scrollTop > Organizer.current.offsetTop - 300) {
+    if (scrollTop > Organizer.current.offsetTop) {
       setnavAcitve('OrganizersAndPresenters')
     }
-
-    // if (scrollTop > JanusQCloud.current.offsetTop - 350) {
-    //   setnavAcitve('JanusQCloud')
-    // }
-
-    // if (scrollTop > gitRpepos.current.offsetTop - 400) {
-    //   setnavAcitve('gitRpepos')
-    // }
   }
   return (
     <div className={styles.root}>
@@ -196,7 +181,7 @@ export default function JanusHomePage() {
                 onScroll={articleContentOnScroll}
                 ref={articleContent}
               >
-                <div className="article_overView">
+                <div className="article_overView" ref={Overview}>
                   <div className="article_overView_titel">
                     <h1
                       style={{
@@ -204,7 +189,6 @@ export default function JanusHomePage() {
                         fontSize: '1.5rem',
                         fontWeight: 700,
                       }}
-                      ref={Overview}
                     >
                       Overview
                     </h1>
@@ -216,31 +200,30 @@ export default function JanusHomePage() {
                     network analysis. However, achieving end-to-end speedup on
                     the real-world quantum device is difficult as it involves a
                     high degree of noise, high compilation overhead, and high
-                    cost of managing the quantum device. cost of managing the
-                    quantum device. In this tutorial, we present Janus 2.0, an
-                    open-source framework for analyzing and optimizing quantum
-                    circuit. This tutorial begins with a brief introduction of
-                    JanusQ cloud platform, which is equipped with several
-                    superconducting quantum chips, developed by Zhejiang
-                    University (Science 2019). Then, we present the tutorial of
-                    Janus 2.0 toolkit, from application -level to
-                    hardware-level. First, we introduce Janus-SAT, an
-                    application-software codesign technique for accelerating the
-                    solving of Boolean satisfiability (SAT) problems (HPCA
-                    2023). We will provide the code and demo to demonstrate the
-                    speedup of Janus-SAT. Second, we introduce Janus-CT, a
+                    cost of managing the quantum device. In this tutorial, we
+                    present Janus 2.0, an open-source framework for analyzing
+                    and optimizing quantum circuits. This tutorial begins with a
+                    brief introduction to the JanusQ cloud platform, which is
+                    equipped with superconducting quantum processors developed
+                    by Zhejiang University (Science, 2019). Then, we present the
+                    tutorial of the Janus 2.0 toolkit, from the application
+                    level to the hardware level. We will introduce Janus-CT, a
                     unified compilation framework that decouples analysis tasks
                     into an upstream vectorization model and downstream models
-                    (MICRO 2023). In this tutorial, we provide the code and demo
-                    of two representative downstream tasks, including fidelity
-                    optimization and unitary decomposition. We will demonstrate
-                    that Janus-CT can enable various software-level optimization
-                    with high scalability. Finally, we introduce Janus-PulseLib,
-                    a hardware-level optimization for accelerating pulse
-                    generation (ICCAD 2023).
+                    (MICRO 2023). We will provide the code and demo of two
+                    representative downstream tasks, including fidelity
+                    optimization and unitary decomposition. We then introduce
+                    Janus-FEM, a scalable quantum readout calibration based on
+                    the finite element method. Finally, we introduce Janus-SAT
+                    and Janus-CT. Janus-SAT is an application-software codesign
+                    technique for accelerating the solving of Boolean
+                    satisfiability (SAT) problems (HPCA 2023). Janus-TC is an
+                    example of simulating time crystal on a superconducting
+                    quantum computer. We will provide the code and demo to
+                    demonstrate the speedup of Janus-SAT.
                   </div>
                 </div>
-                <div className="article_Scheule">
+                <div className="article_Scheule" ref={Schedule}>
                   <div className="shedule_title">
                     It is the first time to hold this tutorial!
                   </div>
@@ -251,7 +234,6 @@ export default function JanusHomePage() {
                         fontSize: '1.5rem',
                         fontWeight: 700,
                       }}
-                      ref={Schedule}
                     >
                       Schedule
                     </h1>
@@ -265,26 +247,45 @@ export default function JanusHomePage() {
                     ></Table>
                   </div>
                 </div>
-
-                <div className="janusq_clound_platform" ref={RealtedPapers}>
+                <div className="janusq_clound_platform" ref={Links}>
                   <div className="title">
-                    <h1> JanusQ cloud platform</h1>
+                    <h1> Links:</h1>
                   </div>
                   <div className="janusQ">
-                    <h4>JanusQ</h4>
-                    <a
-                      href="http://janusq.zju.edu.cn"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      janusq.zju.edu.cn
-                      <span className="LinkOutlined">
-                        <LinkOutlined />
-                      </span>
-                    </a>
+                    <div className="Janusq_clound">
+                      <h4>JanusQ cloud:</h4>
+                      <a
+                        href="http://janusq.zju.edu.cn"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        janusq.zju.edu.cn
+                        <span className="LinkOutlined">
+                          <LinkOutlined />
+                        </span>
+                      </a>
+                    </div>
+                    <h4>
+                      <a
+                        target="_blank"
+                        href="https://github.com/JanusQ/JanusQ/tree/main"
+                        rel="noreferrer"
+                      >
+                        Source code of JanusQ
+                      </a>
+                    </h4>
+                    <h4>
+                      <a
+                        target="_blank"
+                        href="https://janusq.github.io/team/home"
+                        rel="noreferrer"
+                      >
+                        Website of our team
+                      </a>
+                    </h4>
                   </div>
                   <Divider />
-                  <div className="realted_papers">
+                  <div className="realted_papers" ref={RealtedPapers}>
                     <div className="realted_papers_title">
                       <h1
                         style={{
@@ -333,7 +334,7 @@ export default function JanusHomePage() {
                     ))}
                   </div>
                   <Divider />
-                  <div className="code">
+                  {/* <div className="code">
                     <h4 className="title">Code</h4>
                     <div className="gitHub_link">
                       <a>
@@ -359,7 +360,7 @@ export default function JanusHomePage() {
                         </span>
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div ref={Organizer} className="speakers">
@@ -368,7 +369,7 @@ export default function JanusHomePage() {
                       style={{ textAlign: 'left', fontSize: '1.5rem' }}
                       ref={Speakers}
                     >
-                      Organization
+                      Organizer
                     </h1>
                   </div>
                   <Divider />
@@ -390,6 +391,7 @@ export default function JanusHomePage() {
                 </div>
                 <div className="participant">
                   <div className="participant_content">
+                    Participants:
                     {participatorData.map((item, index) => (
                       <div className="participant_item" key={index}>
                         {item}

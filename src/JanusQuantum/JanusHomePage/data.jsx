@@ -478,4 +478,5 @@ export const participatorData = [
   'Xinghui Jia',
   'Hanyu Zhang',
   'Congliang Lang',
+  'Debing Xiang',
 ]

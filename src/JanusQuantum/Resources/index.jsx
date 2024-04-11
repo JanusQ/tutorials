@@ -4,39 +4,33 @@ import { Link } from 'react-router-dom'
 import { Row, Col, Card, Button, Tag } from 'antd'
 import { papersData } from '../JanusHomePage/data'
 import { FileOutlined, FilePdfOutlined } from '@ant-design/icons'
-import { downloadPdf } from '@/util/util'
+import { downloadPdf, downloadPdfWithProgress } from '@/util/util'
 
 export default function Resources() {
   const slides = [
     {
-      title:
-        ' Fast and Accurate Quantum Readout Calibration Using the Finite Element Method',
-      pdf: 'test',
+      title: '0.1 Yin',
+      pdf: 'SllidesPdf/0.1Yin',
     },
     {
-      title:
-        ' Fast and Accurate Quantum Readout Calibration Using the Finite Element Method',
-      pdf: 'test',
+      title: '0.2. background',
+      pdf: 'SllidesPdf/0.2.background',
     },
     {
-      title:
-        ' Fast and Accurate Quantum Readout Calibration Using the Finite Element Method',
-      pdf: 'test',
+      title: '2. janus-ct',
+      pdf: 'SllidesPdf/2.janus-ct',
     },
     {
-      title:
-        ' Fast and Accurate Quantum Readout Calibration Using the Finite Element Method',
-      pdf: 'test',
+      title: '3. janus-fem',
+      pdf: 'SllidesPdf/3.janus-fem',
     },
     {
-      title:
-        ' Fast and Accurate Quantum Readout Calibration Using the Finite Element Method',
-      pdf: 'test',
+      title: '4. 1sat',
+      pdf: 'SllidesPdf/4.1sat',
     },
     {
-      title:
-        ' Fast and Accurate Quantum Readout Calibration Using the Finite Element Method',
-      pdf: 'test',
+      title: '4.2 time crystal',
+      pdf: 'SllidesPdf/4.2timecrystal',
     },
   ]
   const videos = [
@@ -81,7 +75,7 @@ export default function Resources() {
                   </div>
                   <div className="paper_team">{item.team}</div>
                   <div className="link">
-                    <div className="link_boder">
+                    {/* <div className="link_boder">
                       <Link to={'/pdfPreview'} state={{ pdf: item.pdf }}>
                         <FileOutlined
                           className="paper_icon"
@@ -89,9 +83,7 @@ export default function Resources() {
                         />
                         Preview
                       </Link>
-                    </div>
-                    {/* </a> */}
-
+                    </div> */}
                     <div
                       className="link_boder"
                       onClick={() => downloadPdf(item.pdf, item.title)}
@@ -110,7 +102,7 @@ export default function Resources() {
                   <div className="slides_item" key={index}>
                     <div className="pdf_title">{item.title}</div>
                     <div className="link">
-                      <div className="link_boder">
+                      {/* <div className="link_boder">
                         <Link to={'/pdfPreview'} state={{ pdf: item.pdf }}>
                           <FileOutlined
                             className="paper_icon"
@@ -118,12 +110,12 @@ export default function Resources() {
                           />
                           Preview
                         </Link>
-                      </div>
-                      {/* </a> */}
-
+                      </div> */}
                       <div
                         className="link_boder"
-                        onClick={() => downloadPdf(item.pdf, item.title)}
+                        onClick={() =>
+                          downloadPdfWithProgress(item.pdf, item.title)
+                        }
                       >
                         <FilePdfOutlined style={{ marginRight: 10 }} />
                         Download PDF
@@ -145,7 +137,7 @@ export default function Resources() {
                 ))}
               </div>
             </div>
-            <div className="video">
+            {/* <div className="video">
               <div className="video_title title">Video</div>
               <div className="video_content">
                 {videos.map((item, index) => (
@@ -162,7 +154,7 @@ export default function Resources() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </Col>
       </Row>

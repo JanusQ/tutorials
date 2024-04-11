@@ -10,65 +10,6 @@ export default function JanusHeader({ fontColor }) {
   const [showSelect, setShowSelect] = useState(false)
   const onMouseOver = () => {}
 
-  // const items = [
-  //   {
-  //     key: '3',
-  //     label: <Link tyle={{ fontSize: 18, color: 'black' }}>Janus-SAT</Link>,
-  //   },
-  //   {
-  //     key: '4',
-  //     label: <Link tyle={{ fontSize: 18, color: 'black' }}>Janus-CT</Link>,
-  //   },
-  //   {
-  //     key: '5',
-  //     label: (
-  //       <Link tyle={{ fontSize: 18, color: 'black' }}>Janus-PulseLib</Link>
-  //     ),
-  //   },
-  // ]
-  // const items = [
-  //   {
-  //     key: '1',
-  //     label: (
-  //       <a
-  //         target="_blank"
-  //         href="http://janusq.zju.edu.cn/#/home"
-  //         _blank
-  //         rel="noreferrer"
-  //         tyle={{ fontSize: 18, color: 'black' }}
-  //       >
-  //         HomeLink
-  //       </a>
-  //     ),
-  //   },
-  //   {
-  //     key: '2',
-  //     label: (
-  //       <a
-  //         tyle={{ fontSize: 18, color: 'black' }}
-  //         target="_blank"
-  //         href="http://janusq.zju.edu.cn/#/aboutUs"
-  //         rel="noreferrer"
-  //       >
-  //         About us
-  //       </a>
-  //     ),
-  //   },
-  //   {
-  //     key: '3',
-  //     label: <Link tyle={{ fontSize: 18, color: 'black' }}>Janus-SAT</Link>,
-  //   },
-  //   {
-  //     key: '4',
-  //     label: <Link tyle={{ fontSize: 18, color: 'black' }}>Janus-CT</Link>,
-  //   },
-  //   {
-  //     key: '5',
-  //     label: (
-  //       <Link tyle={{ fontSize: 18, color: 'black' }}>Janus-PulseLib</Link>
-  //     ),
-  //   },
-  // ]
   const headerMenu = [
     {
       name: 'JanusQ',
@@ -83,16 +24,8 @@ export default function JanusHeader({ fontColor }) {
       ),
     },
     {
-      name: 'Documents',
-      link: (
-        <a
-          target="_blank"
-          href="http://janusq.zju.edu.cn/documents"
-          rel="noreferrer"
-        >
-          Documents
-        </a>
-      ),
+      name: 'Demo',
+      link: <Link to="/Demonstrations">Demo</Link>,
     },
     {
       name: 'Resources',
@@ -138,15 +71,7 @@ export default function JanusHeader({ fontColor }) {
     },
     {
       key: 2,
-      label: (
-        <a
-          target="_blank"
-          href="http://janusq.zju.edu.cn/documents"
-          rel="noreferrer"
-        >
-          Documents
-        </a>
-      ),
+      label: <Link to="/Demonstrations">Demo</Link>,
     },
     {
       key: 3,

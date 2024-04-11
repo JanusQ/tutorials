@@ -3,6 +3,7 @@
     width: 100%;
     height: 100%;
     font-family: PingFang_REGULAR;
+    text-align: left;
     .home_content {
       height: 100%;
       // position: relative;
@@ -167,28 +168,52 @@
                 text-align: left;
                 font-size: 1.8rem;
                 font-weight: 700;
+                margin: 0;
               }
             }
             .janusQ {
-              margin-top: 40px;
+              margin-top: 10px;
+              .Janusq_clound {
+                display: flex;
+                h4 {
+                  text-align: left;
+                  font-size: 1.5rem;
+                  // font-weight: 700;
+                  white-space: nowrap;
+                  margin: 0;
+                  line-height: 50px;
+                  margin-right: 20px;
+                }
+                a {
+                  line-height: 50px;
+                  font-size: 1.2rem;
+                  color: black;
+                  width: 100%;
+                  // display: block;
+                  text-align: left;
+                  .LinkOutlined {
+                    display: none;
+                  }
+                  &:hover {
+                    color: rgb(134, 132, 132);
+                    .LinkOutlined {
+                      display: inline-block;
+                    }
+                  }
+                }
+              }
               h4 {
                 text-align: left;
-                font-size: 1.5rem;
-                font-weight: 700;
-              }
-              a {
-                font-size: 1.2rem;
-                color: black;
-                width: 100%;
-                display: block;
-                text-align: left;
-                .LinkOutlined {
-                  display: none;
-                }
-                &:hover {
-                  color: rgb(134, 132, 132);
-                  .LinkOutlined {
-                    display: inline-block;
+                font-size: 1.3rem;
+                // font-weight: 700;
+                white-space: nowrap;
+                margin: 0;
+                line-height: 50px;
+                margin-right: 20px;
+                a {
+                  color: #000;
+                  &:hover {
+                    color: rgb(134, 132, 132);
                   }
                 }
               }
@@ -326,6 +351,8 @@
             // display: flex;
             .participant_content {
               display: flex;
+              font-weight: 800;
+
               .participant_item {
                 // margin-left: 150px;
                 text-align: left;
@@ -333,8 +360,8 @@
                 display: inline-block;
                 margin-left: 10px;
                 font-size: 1.2rem;
-                font-weight: 800;
-                font-family: PingFang_HEAVY;
+                font-weight: 400;
+                font-family: PingFang_REGULAR;
               }
             }
 

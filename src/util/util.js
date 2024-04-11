@@ -22,7 +22,7 @@ export function previewPdf(pdfName) {
 }
 // downloadPdfWithProgress.js
 export async function downloadPdfWithProgress(pdfName, title) {
-  const response = await fetch(`/tutorials/PDF/${pdfName}.pdf`)
+  const response = await fetch(`/tutorials/${pdfName}.pdf`)
   const total = Number(response.headers.get('Content-Length'))
   const reader = response.body.getReader()
 
