@@ -44,6 +44,13 @@
       .IpynbRenderer_content {
         width: calc(100% - 400px);
         text-align: justify;
+
+        :global(.language-python) {
+          span {
+            // font-weight: 800;
+            color: #2d2c2c;
+          }
+        }
         :global(.container) {
           flex-direction: column;
           :global(.cell) {

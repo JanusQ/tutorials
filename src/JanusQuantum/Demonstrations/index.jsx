@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
 import { Link } from 'react-router-dom'
 import { Row, Col, Tree, Affix } from 'antd'
@@ -175,10 +175,7 @@ export default function Demonstrations() {
 
         // console.log(reader.result, 88)
       } catch (error) {
-        setShowIpynb('')
-
         console.error('Failed to parse JSON:', error)
-        setShowIpynb('')
       }
     }
     reader.readAsText(ipynbBlob)
@@ -189,6 +186,10 @@ export default function Demonstrations() {
     // console.log('selected', selectedKeys, info)
     loadipynb(selectedKeys[0])
   }
+  useEffect(() => {
+    loadipynb('1-1.install_janusq')
+  }, [])
+
   return (
     <div className={styles.root}>
       <JanusHeader />
@@ -218,57 +219,58 @@ export default function Demonstrations() {
             />
           </div>
         ) : (
-          <div className="domo_container">
-            <div className="start">
-              <div className="title">Getting Started</div>
-              <div className="list_content">
-                {start.map((item, index) => (
-                  // <div className="list_item" key={index}>
-                  //   <Link
-                  //     to={'/tutorial_liealgebra'}
-                  //     state={{ name: item.link }}
-                  //   >
-                  //     {' '}
-                  //     {item.name}
-                  //   </Link>
-                  // </div>
-                  <div className="list_item" key={index}>
-                    {item.name}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="Janus-CT">
-              <div className="title">Janus-CT</div>
-              <div className="list_content">
-                {Janus_CT.map((item, index) => (
-                  <div className="list_item" key={index}>
-                    {item.name}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="Janus-FEM">
-              <div className="title">Janus-FEM</div>
-              <div className="list_content">
-                {Janus_FEM.map((item, index) => (
-                  <div className="list_item" key={index}>
-                    {item.name}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="Janus-SAt">
-              <div className="title">Janus-SAT & CT</div>
-              <div className="list_content">
-                {Janus_SAT.map((item, index) => (
-                  <div className="list_item" key={index}>
-                    {item.name}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          ''
+          // <div className="domo_container">
+          //   <div className="start">
+          //     <div className="title">Getting Started</div>
+          //     <div className="list_content">
+          //       {start.map((item, index) => (
+          //         // <div className="list_item" key={index}>
+          //         //   <Link
+          //         //     to={'/tutorial_liealgebra'}
+          //         //     state={{ name: item.link }}
+          //         //   >
+          //         //     {' '}
+          //         //     {item.name}
+          //         //   </Link>
+          //         // </div>
+          //         <div className="list_item" key={index}>
+          //           {item.name}
+          //         </div>
+          //       ))}
+          //     </div>
+          //   </div>
+          //   <div className="Janus-CT">
+          //     <div className="title">Janus-CT</div>
+          //     <div className="list_content">
+          //       {Janus_CT.map((item, index) => (
+          //         <div className="list_item" key={index}>
+          //           {item.name}
+          //         </div>
+          //       ))}
+          //     </div>
+          //   </div>
+          //   <div className="Janus-FEM">
+          //     <div className="title">Janus-FEM</div>
+          //     <div className="list_content">
+          //       {Janus_FEM.map((item, index) => (
+          //         <div className="list_item" key={index}>
+          //           {item.name}
+          //         </div>
+          //       ))}
+          //     </div>
+          //   </div>
+          //   <div className="Janus-SAt">
+          //     <div className="title">Janus-SAT & CT</div>
+          //     <div className="list_content">
+          //       {Janus_SAT.map((item, index) => (
+          //         <div className="list_item" key={index}>
+          //           {item.name}
+          //         </div>
+          //       ))}
+          //     </div>
+          //   </div>
+          // </div>
         )}
       </div>
     </div>
