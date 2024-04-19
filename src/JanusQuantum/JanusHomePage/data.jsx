@@ -202,7 +202,7 @@ export const dataSource = [
         lmplementing quantum applications
       </div>
     ),
-    Presenter: 'Liqiang Lu',
+    Presenter: 'Siwei Tan & Chenling Tao',
     Resources: (
       <span>
         <Tag color={'green'}>

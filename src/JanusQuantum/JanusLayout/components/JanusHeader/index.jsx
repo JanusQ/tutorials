@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Button, Popover, Dropdown, Space, Row, Col } from 'antd'
 import { DownOutlined } from '@ant-design/icons'
 import styles from './index.module.scss'
@@ -25,7 +25,7 @@ export default function JanusHeader({ fontColor }) {
     },
     {
       name: 'Demo',
-      link: <Link to="/Demonstrations">Demo</Link>,
+      link: <Link to={'/Demonstrations/1-1.install_janusq'}>Demo</Link>,
     },
     {
       name: 'Resources',

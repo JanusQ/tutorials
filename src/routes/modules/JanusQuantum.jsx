@@ -76,7 +76,7 @@ export const JanusRouter = [
     ],
   },
   {
-    path: '/demonstrations',
+    path: '/demonstrations/:fileName',
     element: LazyLoad(
       React.lazy(() => import('../../JanusQuantum/Demonstrations'))
     ),

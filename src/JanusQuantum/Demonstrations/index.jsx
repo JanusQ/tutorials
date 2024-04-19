@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
-import { Link } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { Row, Col, Tree, Affix } from 'antd'
 import { IpynbRenderer } from 'react-ipynb-renderer'
 import 'react-ipynb-renderer/dist/styles/default.css'
@@ -10,7 +10,13 @@ import {
   FormOutlined,
 } from '@ant-design/icons'
 import JanusHeader from '../JanusLayout/components/JanusHeader'
+import NProgress from '@/components/Nprogress'
 export default function Demonstrations() {
+  const navigate = useNavigate()
+  let { fileName } = useParams()
+
+  const [defaultSelectedKeys, setDefaultSelectedKeys] = useState(fileName)
+  console.log(fileName, 'fileName')
   const start = [
     {
       name: 'Install JanusQ',
@@ -147,6 +153,7 @@ export default function Demonstrations() {
   ]
   const [showIpynb, setShowIpynb] = useState('')
   const loadipynb = async (name) => {
+    NProgress.start()
     const response = await fetch(`/tutorials/Ipynb/${name}.ipynb`)
     const ipynbBlob = await response.blob()
     const reader = new FileReader()
@@ -160,6 +167,7 @@ export default function Demonstrations() {
           // 打印 JSON 内容
 
           setShowIpynb(ipynbJSON)
+          NProgress.done()
         } else {
           const nodata = {
             cells: [
@@ -171,6 +179,7 @@ export default function Demonstrations() {
             ],
           }
           setShowIpynb(nodata)
+          NProgress.done()
         }
 
         // console.log(reader.result, 88)
@@ -184,11 +193,13 @@ export default function Demonstrations() {
   const onSelect = (selectedKeys, info) => {
     window.scrollTo({ top: 0, behavior: 'auto' })
     // console.log('selected', selectedKeys, info)
-    loadipynb(selectedKeys[0])
+    navigate(`/Demonstrations/${selectedKeys[0]}`)
+
+    // loadipynb(selectedKeys[0])
   }
   useEffect(() => {
-    loadipynb('1-1.install_janusq')
-  }, [])
+    loadipynb(fileName)
+  }, [fileName])
 
   return (
     <div className={styles.root}>
@@ -199,8 +210,8 @@ export default function Demonstrations() {
         <div className="left_menu">
           <Affix offsetTop={80}>
             <Tree
+              defaultSelectedKeys={[defaultSelectedKeys]}
               showLine={true}
-              defaultExpandedKeys={['0-0-0']}
               onSelect={onSelect}
               treeData={treeData}
               defaultExpandAll={true}
