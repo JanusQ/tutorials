@@ -422,7 +422,7 @@ export const organizerData = [
     name: 'Siwei Tan',
     photo: tansiwei,
     introduce:
-      'Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture.',
+      'Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture.He has published more than 14 papers in top journals and conferences, including MICRO, HPCA, ASPLOS, DAC, VIS and TVCG.',
   },
 ]
 export const papersData = [

@@ -391,13 +391,23 @@ export default function JanusHomePage() {
                 </div>
                 <div className="participant">
                   <div className="participant_content">
-                    Participants:
+                    Team members:
                     {participatorData.map((item, index) => (
                       <div className="participant_item" key={index}>
                         {item}
                         {index !== participatorData.length - 1 ? ',' : ''}
                       </div>
                     ))}
+                  </div>
+                </div>
+                <div className="participant">
+                  <div className="participant_content">
+                    Acknowledgment:
+                    <div className="participant_item">
+                      We thank Haohua Wang, Chao Song, Zhen Wang, and Qiujiang
+                      Guo for providing quantum hardware and essential support
+                      for the tutorial.
+                    </div>
                   </div>
                 </div>
               </div>
