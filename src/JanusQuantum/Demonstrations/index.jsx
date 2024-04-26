@@ -16,7 +16,6 @@ export default function Demonstrations() {
   let { fileName } = useParams()
 
   const [defaultSelectedKeys, setDefaultSelectedKeys] = useState(fileName)
-  console.log(fileName, 'fileName')
   const start = [
     {
       name: 'Install JanusQ',
@@ -77,75 +76,80 @@ export default function Demonstrations() {
           key: '1-1.install_janusq',
           icon: <CarryOutOutlined />,
         },
+        {
+          title: 'submit to cloud',
+          key: '2-1.submit_to_cloud',
+          icon: <CarryOutOutlined />,
+        },
       ],
     },
     {
       title: 'Janus-CT',
-      key: '0-1',
+      key: '0-2',
       icon: <CarryOutOutlined />,
       children: [
         {
           title: 'Vectorization model of Janus-CT',
-          key: '2-1.vectorization',
+          key: '3-1.vectorization',
           icon: <CarryOutOutlined />,
         },
         {
           title: 'Fidelity prediction of JanusQ-CT on quantum simulators',
-          key: '2-2.fidelity_prediction_simulator',
+          key: '3-2.fidelity_prediction_simulator',
           icon: <CarryOutOutlined />,
         },
         {
           title: 'Fidelity prediction of JanusQ-CT on real quantum devices',
-          key: '2-3.fidelity_prediction_realqc',
+          key: '3-3.fidelity_prediction_realqc',
           icon: <CarryOutOutlined />,
         },
         {
           title: 'Noise optimization based on JanusQ-CT',
-          key: '2-4.fidelity_optimization',
+          key: '3-4.fidelity_optimization',
           icon: <CarryOutOutlined />,
         },
         {
           title: 'Unitary decomposition based on JanusQ-CT',
-          key: '2-5.unitary_decomposition',
+          key: '3-5.unitary_decomposition',
           icon: <CarryOutOutlined />,
         },
         {
           title: 'extend framework bug identification',
-          key: '2-6.extend_framework_bug_identification',
+          key: '3-6.extend_framework_bug_identification',
           icon: <CarryOutOutlined />,
         },
       ],
     },
     {
       title: 'Janus-FEM',
-      key: '0-2',
+      key: '0-3',
       icon: <CarryOutOutlined />,
       children: [
         {
           title: 'Readout calibration of Janus-FEM on quantum simulators',
-          key: '3-1.readout_calibration_simulator',
+          key: '4-1.readout_calibration_simulator',
           icon: <CarryOutOutlined />,
         },
         {
           title: 'Readout calibration of Janus-FEM on real quantum devices',
-          key: '3-2.readout_calibration_realqc',
+          key: '4-2.readout_calibration_realqc',
           icon: <CarryOutOutlined />,
         },
       ],
     },
     {
       title: 'Janus-SAT & CT',
-      key: '0-3',
+      key: '0-4',
       icon: <CarryOutOutlined />,
       children: [
         {
           title: 'solve sat domain problem',
-          key: '4-1.solve_sat_domain_problem',
+          key: '5-1.solve_sat_domain_problem',
           icon: <CarryOutOutlined />,
         },
         {
           title: 'simulate time crystal',
-          key: '4-2.simulate_time_crystal',
+          key: '5-2.simulate_time_crystal',
           icon: <CarryOutOutlined />,
         },
       ],

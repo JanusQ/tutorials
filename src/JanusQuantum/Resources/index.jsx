@@ -9,28 +9,32 @@ import { downloadPdf, downloadPdfWithProgress } from '@/util/util'
 export default function Resources() {
   const slides = [
     {
-      title: '1.1 Introduction v3',
-      pdf: 'SllidesPdf/1.1 Introduction v3',
+      title: '1.1 Introduction',
+      pdf: 'SllidesPdf/1.1 Introduction',
     },
     {
-      title: '1.2. background v2',
-      pdf: 'SllidesPdf/1.2. background v2',
+      title: '1.2. background',
+      pdf: 'SllidesPdf/1.2 background',
+    },
+    {
+      title: '2. installation and janus cloud',
+      pdf: 'SllidesPdf/2. installation and janus cloud',
     },
     {
       title: '3. janus-ct',
       pdf: 'SllidesPdf/3. janus-ct',
     },
     {
-      title: '4. janus-fem v2',
-      pdf: 'SllidesPdf/4. janus-fem v2',
+      title: '4. janus-fem',
+      pdf: 'SllidesPdf/4. janus-fem',
     },
     {
       title: '5.1 janus-sat',
       pdf: 'SllidesPdf/5.1 janus-sat',
     },
     {
-      title: '5.2 janus-tc v3',
-      pdf: 'SllidesPdf/5.2 janus-tc v3',
+      title: '5.2 janus-tc',
+      pdf: 'SllidesPdf/5.2 janus-tc',
     },
   ]
   const videos = [
