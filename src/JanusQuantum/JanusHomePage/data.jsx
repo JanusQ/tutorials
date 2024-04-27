@@ -13,7 +13,6 @@ export const dataSource = [
         1:00 PM
       </div>
     ),
-    // TimeEDT: '4:40 PM',
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
         Introduction of Janus quantum cloud platform
@@ -25,9 +24,6 @@ export const dataSource = [
         <Tag color={'green'}>
           <Link to="/resources">slide</Link>
         </Tag>
-        <Tag color={'blue'}>
-          <Link to="/resources">video</Link>
-        </Tag>
       </span>
     ),
   },
@@ -38,7 +34,6 @@ export const dataSource = [
         1:15 PM
       </div>
     ),
-    // TimeEDT: '4:40 PM',
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
         Janus-CT Details
@@ -50,80 +45,52 @@ export const dataSource = [
         <Tag color={'green'}>
           <Link to="/resources">slide</Link>
         </Tag>
-        <Tag color={'blue'}>
-          <Link to="/resources">video</Link>
-        </Tag>
       </span>
     ),
   },
   {
     key: '3',
-    // TimePDT: '1:40 PM',
-    // TimeEDT: '4:40 PM',
+
     Agenda: 'Vectorization model and code examples',
-    // Presenter: 'Tushar',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          {' '}
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
   },
   {
     key: '4',
-    // TimePDT: '1:40 PM',
-    // TimeEDT: '4:40 PM',
+
     Agenda: 'Fidelity optimization using gate vectors',
-    // Presenter: 'Tushar',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          {' '}
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
   },
   {
     key: '5',
-    // TimePDT: '1:40 PM',
-    // TimeEDT: '4:40 PM',
+
     Agenda: 'Unitary decomposition using gate vectors',
-    // Presenter: 'Tushar',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          {' '}
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
   },
   {
     key: '6',
-    // TimePDT: '1:40 PM',
-    // TimeEDT: '4:40 PM',
     Agenda: 'Extending the framework by yourself: other downstream tasks!',
-    // Presenter: 'Tushar',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          {' '}
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
@@ -135,7 +102,6 @@ export const dataSource = [
         2:45 PM
       </div>
     ),
-    // TimeEDT: '4:40 PM',
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
         Janus-FEM Details
@@ -145,19 +111,13 @@ export const dataSource = [
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          {' '}
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
   },
   {
     key: '8',
-    // TimePDT: '1:40 PM',
-    // TimeEDT: '4:40 PM',
     Agenda: 'Characterization of readout error',
     // Presenter: 'Tushar',
     Resources: (
@@ -165,26 +125,16 @@ export const dataSource = [
         <Tag color={'green'}>
           <Link to="/resources">slide</Link>
         </Tag>
-        <Tag color={'blue'}>
-          <Link to="/resources">video</Link>
-        </Tag>
       </span>
     ),
   },
   {
     key: '9',
-    // TimePDT: '1:40 PM',
-    // TimeEDT: '4:40 PM',
     Agenda: 'Readout calibration using Janus-FEM',
-    // Presenter: 'Tushar',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          {' '}
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
@@ -196,7 +146,6 @@ export const dataSource = [
         3:15 PM
       </div>
     ),
-    // TimeEDT: '4:40 PM',
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
         lmplementing quantum applications
@@ -206,62 +155,40 @@ export const dataSource = [
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          {' '}
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
   },
   {
     key: '11',
-    // TimePDT: '1:40 PM',
-    // TimeEDT: '4:40 PM',
     Agenda: 'Introduction of SAT problem and time crystal',
-    // Presenter: 'Tushar',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
   },
   {
     key: '12',
-    // TimePDT: '1:40 PM',
-    // TimeEDT: '4:40 PM',
     Agenda: 'End-to-end speedup in domain problems based on quantum SAT solver',
-    // Presenter: 'Tushar',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
   },
   {
     key: '13',
-    // TimePDT: '1:40 PM',
-    // TimeEDT: '4:40 PM',
     Agenda: 'Simulate time crystal on Janus quantum platform',
-    // Presenter: 'Tushar',
     Resources: (
       <span>
         <Tag color={'green'}>
-          <Link to="/resources">slide</Link>{' '}
-        </Tag>
-        <Tag color={'blue'}>
-          <Link to="/resources">video</Link>
+          <Link to="/resources">slide</Link>
         </Tag>
       </span>
     ),
@@ -273,7 +200,6 @@ export const dataSource = [
         4:30 PM
       </div>
     ),
-    // TimeEDT: '4:40 PM',
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>Q & A</div>
     ),
@@ -282,9 +208,6 @@ export const dataSource = [
       <span>
         <Tag color={'green'}>
           <Link to="/resources">slide</Link>
-        </Tag>
-        <Tag color={'blue'}>
-          <Link to="/resources">video</Link>
         </Tag>
       </span>
     ),
