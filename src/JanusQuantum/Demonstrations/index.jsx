@@ -143,12 +143,12 @@ export default function Demonstrations() {
       icon: <CarryOutOutlined />,
       children: [
         {
-          title: 'solve sat domain problem',
+          title: 'Hybrid Quantum-Classical SAT solver (Janus-SAT)',
           key: '5-1.solve_sat_domain_problem',
           icon: <CarryOutOutlined />,
         },
         {
-          title: 'simulate time crystal',
+          title: 'Time crystal simulation (Janus-FEM)',
           key: '5-2.simulate_time_crystal',
           icon: <CarryOutOutlined />,
         },
@@ -198,11 +198,16 @@ export default function Demonstrations() {
     window.scrollTo({ top: 0, behavior: 'auto' })
     // console.log('selected', selectedKeys, info)
     navigate(`/Demonstrations/${selectedKeys[0]}`)
-
+    setDefaultSelectedKeys()
     // loadipynb(selectedKeys[0])
   }
   useEffect(() => {
-    loadipynb(fileName)
+    if (fileName) {
+      loadipynb(fileName)
+    } else {
+      navigate('/Demonstrations/1-1.install_janusq')
+      // loadipynb('1-1.install_janusq')
+    }
   }, [fileName])
 
   return (

@@ -48,7 +48,7 @@ export default function JanusHomePage() {
 
     {
       id: 'OrganizersAndPresenters',
-      name: 'Organizer',
+      name: 'Organizers',
     },
     // {
     //   id: 'JanusQCloud',
@@ -369,7 +369,7 @@ export default function JanusHomePage() {
                       style={{ textAlign: 'left', fontSize: '1.5rem' }}
                       ref={Speakers}
                     >
-                      Organizer
+                      Organizers
                     </h1>
                   </div>
                   <Divider />

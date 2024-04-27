@@ -86,4 +86,15 @@ export const JanusRouter = [
       key: 'demonstrations',
     },
   },
+  {
+    path: '/demonstrations/',
+    element: LazyLoad(
+      React.lazy(() => import('../../JanusQuantum/Demonstrations'))
+    ),
+    meta: {
+      requiresAuth: false,
+      title: 'demonstratio',
+      key: 'demonstratio',
+    },
+  },
 ]

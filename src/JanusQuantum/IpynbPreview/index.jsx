@@ -8,7 +8,7 @@ export default function IpynbPreview() {
     state: { name },
   } = useLocation()
   const [ipy, setipy] = useState('')
-  const loadipynb = async () => {
+  const loadipynb = async (name) => {
     const response = await fetch(`/tutorials/Ipynb/${name}.ipynb`)
     const ipynbBlob = await response.blob()
     const reader = new FileReader()
@@ -45,7 +45,11 @@ export default function IpynbPreview() {
   }
 
   useEffect(() => {
-    loadipynb()
+    if (name) {
+      loadipynb(name)
+    } else {
+      loadipynb('1-1.install_janusq')
+    }
   }, [])
   useEffect(() => {
     // Reset scroll position to top when component unmounts

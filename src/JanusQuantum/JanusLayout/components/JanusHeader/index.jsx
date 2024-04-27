@@ -12,6 +12,10 @@ export default function JanusHeader({ fontColor }) {
 
   const headerMenu = [
     {
+      name: 'Resources',
+      link: <Link to="/home">Home</Link>,
+    },
+    {
       name: 'JanusQ',
       link: (
         <a

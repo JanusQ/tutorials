@@ -1,16 +1,21 @@
-import { Space, Table, Tag, Col, Row, Affix, Divider } from 'antd'
+import { Space, Table, Tag, Col, Row, Affix, Divider, Button } from 'antd'
 import { Link } from 'react-router-dom'
 import jianweiyin from '../../assets/image/janusSwiper/JianweiYin.png'
 import liqianglu from '../../assets/image/janusSwiper/liqianglu.jpg'
 import tansiwei from '../../assets/image/janusSwiper/tansiwei.png'
 import wuweitian from '../../assets/image/janusSwiper/wuweitian.png'
 import zhanghanyu from '@/assets/image/janusSwiper/HanyuZhang.jpg'
+import { downloadPdf, downloadPdfWithProgress } from '@/util/util'
+const downloadTow = () => {
+  downloadPdfWithProgress('SllidesPdf/1.1 Introduction v3', '1.1 Introduction')
+  downloadPdfWithProgress('SllidesPdf/1.2 background v2', '1.2. background')
+}
 export const dataSource = [
   {
     key: '1',
     TimePDT: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
-        1:00 PM
+        1:30 PM
       </div>
     ),
     Agenda: (
@@ -21,8 +26,12 @@ export const dataSource = [
     Presenter: 'Jianwei Yin',
     Resources: (
       <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
+        <Tag
+          color={'green'}
+          style={{ cursor: 'pointer' }}
+          onClick={downloadTow}
+        >
+          slide
         </Tag>
       </span>
     ),
@@ -31,7 +40,37 @@ export const dataSource = [
     key: '2',
     TimePDT: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
-        1:15 PM
+        2:00 PM
+      </div>
+    ),
+    Agenda: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        Installing JanusQ
+      </div>
+    ),
+    Presenter: 'Siwei Tan',
+    Resources: (
+      <span>
+        <Tag
+          color={'green'}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            downloadPdfWithProgress(
+              'SllidesPdf/2. installation and janus cloud',
+              '2. installation and janus cloud'
+            )
+          }
+        >
+          slide
+        </Tag>
+      </span>
+    ),
+  },
+  {
+    key: '3',
+    TimePDT: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        2:10 PM
       </div>
     ),
     Agenda: (
@@ -42,20 +81,14 @@ export const dataSource = [
     Presenter: 'Siwei Tan',
     Resources: (
       <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
-        </Tag>
-      </span>
-    ),
-  },
-  {
-    key: '3',
-
-    Agenda: 'Vectorization model and code examples',
-    Resources: (
-      <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
+        <Tag
+          color={'green'}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            downloadPdfWithProgress('SllidesPdf/3. janus-ct', '3. janus-ct')
+          }
+        >
+          slide
         </Tag>
       </span>
     ),
@@ -63,43 +96,40 @@ export const dataSource = [
   {
     key: '4',
 
-    Agenda: 'Fidelity optimization using gate vectors',
-    Resources: (
-      <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
-        </Tag>
-      </span>
-    ),
+    Agenda: 'Vectorization model and code examples',
   },
   {
     key: '5',
 
-    Agenda: 'Unitary decomposition using gate vectors',
-    Resources: (
-      <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
-        </Tag>
-      </span>
-    ),
+    Agenda: 'Fidelity optimization using gate vectors',
   },
   {
     key: '6',
-    Agenda: 'Extending the framework by yourself: other downstream tasks!',
-    Resources: (
-      <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
-        </Tag>
-      </span>
-    ),
+
+    Agenda: 'Unitary decomposition using gate vectors',
   },
   {
     key: '7',
+    Agenda: 'Extending the framework by yourself: other downstream tasks!',
+  },
+  {
+    key: '8',
     TimePDT: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
-        2:45 PM
+        3:00 PM
+      </div>
+    ),
+    Agenda: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        Take a break
+      </div>
+    ),
+  },
+  {
+    key: '9',
+    TimePDT: (
+      <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
+        3:30 PM
       </div>
     ),
     Agenda: (
@@ -110,40 +140,35 @@ export const dataSource = [
     Presenter: 'Hanyu Zhang',
     Resources: (
       <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
-        </Tag>
-      </span>
-    ),
-  },
-  {
-    key: '8',
-    Agenda: 'Characterization of readout error',
-    // Presenter: 'Tushar',
-    Resources: (
-      <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
-        </Tag>
-      </span>
-    ),
-  },
-  {
-    key: '9',
-    Agenda: 'Readout calibration using Janus-FEM',
-    Resources: (
-      <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
+        <Tag
+          color={'green'}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            downloadPdfWithProgress(
+              'SllidesPdf/4. janus-fem v3',
+              '4. janus-fem'
+            )
+          }
+        >
+          slide
         </Tag>
       </span>
     ),
   },
   {
     key: '10',
+    Agenda: 'Characterization of readout error',
+    // Presenter: 'Tushar',
+  },
+  {
+    key: '11',
+    Agenda: 'Readout calibration using Janus-FEM',
+  },
+  {
+    key: '16',
     TimePDT: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
-        3:15 PM
+        4:15 PM
       </div>
     ),
     Agenda: (
@@ -152,65 +177,57 @@ export const dataSource = [
       </div>
     ),
     Presenter: 'Siwei Tan & Chenling Tao',
+  },
+  {
+    key: '17',
+    Agenda:
+      'Janus-SAT: End-to-end speedup in domain problems based on quantum SAT solver',
     Resources: (
       <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
+        <Tag
+          color={'green'}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            downloadPdfWithProgress('SllidesPdf/5.1 janus-sat', '5.1 janus-sat')
+          }
+        >
+          slide
         </Tag>
       </span>
     ),
   },
   {
-    key: '11',
-    Agenda: 'Introduction of SAT problem and time crystal',
+    key: '15',
+    Agenda: 'Janus-TC: Simulate time crystal on Janus quantum platform',
     Resources: (
       <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
+        <Tag
+          color={'green'}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            downloadPdfWithProgress(
+              'SllidesPdf/5.2 janus-tc v3',
+              '5.2 janus-tc'
+            )
+          }
+        >
+          slide
         </Tag>
       </span>
     ),
   },
+
   {
-    key: '12',
-    Agenda: 'End-to-end speedup in domain problems based on quantum SAT solver',
-    Resources: (
-      <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
-        </Tag>
-      </span>
-    ),
-  },
-  {
-    key: '13',
-    Agenda: 'Simulate time crystal on Janus quantum platform',
-    Resources: (
-      <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
-        </Tag>
-      </span>
-    ),
-  },
-  {
-    key: '14',
+    key: '18',
     TimePDT: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>
-        4:30 PM
+        5:15 PM
       </div>
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>Q & A</div>
     ),
     Presenter: 'Siwei Tan',
-    Resources: (
-      <span>
-        <Tag color={'green'}>
-          <Link to="/resources">slide</Link>
-        </Tag>
-      </span>
-    ),
   },
 ]
 export const dataSource1 = [

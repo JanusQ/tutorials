@@ -10,11 +10,11 @@ export default function Resources() {
   const slides = [
     {
       title: '1.1 Introduction',
-      pdf: 'SllidesPdf/1.1 Introduction',
+      pdf: 'SllidesPdf/1.1 Introduction v3',
     },
     {
       title: '1.2. background',
-      pdf: 'SllidesPdf/1.2 background',
+      pdf: 'SllidesPdf/1.2 background v2',
     },
     {
       title: '2. installation and janus cloud',
@@ -26,7 +26,7 @@ export default function Resources() {
     },
     {
       title: '4. janus-fem',
-      pdf: 'SllidesPdf/4. janus-fem',
+      pdf: 'SllidesPdf/4. janus-fem v3',
     },
     {
       title: '5.1 janus-sat',
@@ -34,7 +34,7 @@ export default function Resources() {
     },
     {
       title: '5.2 janus-tc',
-      pdf: 'SllidesPdf/5.2 janus-tc',
+      pdf: 'SllidesPdf/5.2 janus-tc v3',
     },
   ]
   const videos = [
