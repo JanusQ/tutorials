@@ -1,20 +1,20 @@
-import React, { useEffect, useState, useRef } from 'react'
-import { Space, Table, Tag, Col, Row, Affix, Divider, Avatar } from 'antd'
-import styles from './index.module.scss'
+import React, { useEffect, useState, useRef } from "react"
+import { Space, Table, Tag, Col, Row, Affix, Divider, Avatar } from "antd"
+import styles from "./index.module.scss"
 
-import janus from '../../assets/image/janusSwiper/Frame 3.svg'
-import paper from '../../assets/image/janusSwiper/paper.png'
-import Lightning from '../../assets/image/janusSwiper/Lightning.png'
-import { LinkOutlined, FileOutlined, FilePdfOutlined } from '@ant-design/icons'
+import janus from "../../assets/image/janusSwiper/Frame 3.svg"
+import paper from "../../assets/image/janusSwiper/paper.png"
+import Lightning from "../../assets/image/janusSwiper/Lightning.png"
+import { LinkOutlined, FileOutlined, FilePdfOutlined } from "@ant-design/icons"
 import {
   dataSource,
   columns1,
   organizerData,
   papersData,
   participatorData,
-} from './data'
-import Title from '@/components/Title'
-import { downloadPdf } from '@/util/util'
+} from "./data"
+import Title from "@/components/Title"
+import { downloadPdf } from "@/util/util"
 export default function JanusHomePage() {
   const articleContent = useRef()
   const Overview = useRef()
@@ -30,25 +30,25 @@ export default function JanusHomePage() {
 
   const articleNav = [
     {
-      id: 'Overview',
-      name: 'Overview',
+      id: "Overview",
+      name: "Overview",
     },
     {
-      id: 'Schedule',
-      name: 'Schedule',
+      id: "Schedule",
+      name: "Schedule",
     },
     {
-      id: 'Links',
-      name: 'Links',
+      id: "Links",
+      name: "Links",
     },
     {
-      id: 'RealtedPapers',
-      name: 'Realted Papers',
+      id: "RealtedPapers",
+      name: "Realted Papers",
     },
 
     {
-      id: 'OrganizersAndPresenters',
-      name: 'Organizers',
+      id: "OrganizersAndPresenters",
+      name: "Organizers",
     },
     // {
     //   id: 'JanusQCloud',
@@ -59,50 +59,50 @@ export default function JanusHomePage() {
     //   name: 'Repository',
     // },
   ]
-  const [navAcitve, setnavAcitve] = useState('Overview')
+  const [navAcitve, setnavAcitve] = useState("Overview")
   const toClickContent = (content) => {
     let topPosition
     switch (content) {
-      case 'Overview':
+      case "Overview":
         topPosition = Overview.current.offsetTop
-        setnavAcitve('Overview')
+        setnavAcitve("Overview")
         break
-      case 'Schedule':
+      case "Schedule":
         topPosition = Schedule.current.offsetTop
-        setnavAcitve('Schedule')
+        setnavAcitve("Schedule")
 
         break
-      case 'OrganizersAndPresenters':
+      case "OrganizersAndPresenters":
         topPosition = Organizer.current.offsetTop
-        setnavAcitve('OrganizersAndPresenters')
+        setnavAcitve("OrganizersAndPresenters")
 
         break
-      case 'Speakers':
+      case "Speakers":
         topPosition = Speakers.current.offsetTop
-        setnavAcitve('Speakers')
+        setnavAcitve("Speakers")
 
         break
 
-      case 'RealtedPapers':
+      case "RealtedPapers":
         topPosition = RealtedPapers.current.offsetTop
-        setnavAcitve('RealtedPapers')
+        setnavAcitve("RealtedPapers")
 
         break
-      case 'Links':
+      case "Links":
         topPosition = Links.current.offsetTop
-        setnavAcitve('Links')
+        setnavAcitve("Links")
 
         break
       default:
         break
     }
-    window.scrollTo({ top: topPosition + 300, behavior: 'smooth' })
+    window.scrollTo({ top: topPosition + 300, behavior: "smooth" })
   }
   useEffect(() => {
     setWindowHeight(document.body.clientHeight)
-    window.addEventListener('scroll', articleContentOnScroll)
+    window.addEventListener("scroll", articleContentOnScroll)
     return () => {
-      window.removeEventListener('scroll', articleContentOnScroll)
+      window.removeEventListener("scroll", articleContentOnScroll)
     }
   }, [])
 
@@ -113,20 +113,20 @@ export default function JanusHomePage() {
       document.body.scrollTop
 
     if (scrollTop > Overview.current.offsetTop) {
-      setnavAcitve('Overview')
+      setnavAcitve("Overview")
     }
 
     if (scrollTop > Schedule.current.offsetTop) {
-      setnavAcitve('Schedule')
+      setnavAcitve("Schedule")
     }
     if (scrollTop > Links.current.offsetTop) {
-      setnavAcitve('Links')
+      setnavAcitve("Links")
     }
     if (scrollTop > RealtedPapers.current.offsetTop) {
-      setnavAcitve('RealtedPapers')
+      setnavAcitve("RealtedPapers")
     }
     if (scrollTop > Organizer.current.offsetTop) {
-      setnavAcitve('OrganizersAndPresenters')
+      setnavAcitve("OrganizersAndPresenters")
     }
   }
   return (
@@ -163,8 +163,8 @@ export default function JanusHomePage() {
                           onClick={() => toClickContent(item.id)}
                           className={
                             navAcitve === item.id
-                              ? 'articleNav_active articleNav_item'
-                              : 'articleNav_item'
+                              ? "articleNav_active articleNav_item"
+                              : "articleNav_item"
                           }
                         >
                           {item.name}
@@ -185,8 +185,8 @@ export default function JanusHomePage() {
                   <div className="article_overView_titel">
                     <h1
                       style={{
-                        textAlign: 'left',
-                        fontSize: '1.5rem',
+                        textAlign: "left",
+                        fontSize: "1.5rem",
                         fontWeight: 700,
                       }}
                     >
@@ -230,8 +230,8 @@ export default function JanusHomePage() {
                   <div className="article_Scheule_titel">
                     <h1
                       style={{
-                        textAlign: 'left',
-                        fontSize: '1.5rem',
+                        textAlign: "left",
+                        fontSize: "1.5rem",
                         fontWeight: 700,
                       }}
                     >
@@ -240,7 +240,7 @@ export default function JanusHomePage() {
                   </div>
                   <div className="articcle_Scheule_content">
                     <Table
-                      styles={{ fontSize: '1.8rem' }}
+                      styles={{ fontSize: "1.8rem" }}
                       pagination={false}
                       dataSource={dataSource}
                       columns={columns1}
@@ -289,8 +289,8 @@ export default function JanusHomePage() {
                     <div className="realted_papers_title">
                       <h1
                         style={{
-                          textAlign: 'left',
-                          fontSize: '1.5rem',
+                          textAlign: "left",
+                          fontSize: "1.5rem",
                           fontWeight: 700,
                         }}
                       >
@@ -313,7 +313,7 @@ export default function JanusHomePage() {
                                 src={paper}
                                 alt=""
                               ></img> */}
-                              Paper
+                              URL
                             </div>
                           </a>
 
@@ -366,7 +366,7 @@ export default function JanusHomePage() {
                 <div ref={Organizer} className="speakers">
                   <div className="speaker_title">
                     <h1
-                      style={{ textAlign: 'left', fontSize: '1.5rem' }}
+                      style={{ textAlign: "left", fontSize: "1.5rem" }}
                       ref={Speakers}
                     >
                       Organizers
@@ -395,7 +395,7 @@ export default function JanusHomePage() {
                     {participatorData.map((item, index) => (
                       <div className="participant_item" key={index}>
                         {item}
-                        {index !== participatorData.length - 1 ? ',' : ''}
+                        {index !== participatorData.length - 1 ? "," : ""}
                       </div>
                     ))}
                   </div>
